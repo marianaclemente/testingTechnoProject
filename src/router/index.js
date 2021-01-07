@@ -1,8 +1,10 @@
-import { createRouter, createWebHistory } from 'vue-router'
+// import { createRouter, createWebHistory } from 'vue-router'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Produto from '../views/Produto.vue'
 // import Carrinho from '../views/Carrinho.vue'
-
+Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
@@ -10,7 +12,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/produto/:id',
+    path: '/:id',
     name: 'Produto',
     component: Produto,
     props: true
@@ -35,9 +37,10 @@ const routes = [
   // },
 ]
 
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+// const router = createRouter({
+//   history: createWebHistory(process.env.BASE_URL),
+//   routes
+// })
+const router = new VueRouter({mode: 'history', routes: routes})
 
 export default router

@@ -22,9 +22,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">54.29% </span>
+                <span class="strong">57.14% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>19/35</span>
+                <span class='fraction'>20/35</span>
             </div>
         
             
@@ -43,9 +43,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">54.29% </span>
+                <span class="strong">57.14% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>19/35</span>
+                <span class='fraction'>20/35</span>
             </div>
         
             
@@ -338,7 +338,8 @@
 <a name='L280'></a><a href='#L280'>280</a>
 <a name='L281'></a><a href='#L281'>281</a>
 <a name='L282'></a><a href='#L282'>282</a>
-<a name='L283'></a><a href='#L283'>283</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L283'></a><a href='#L283'>283</a>
+<a name='L284'></a><a href='#L284'>284</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -373,13 +374,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -416,7 +417,7 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -429,7 +430,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -449,6 +450,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -680,7 +682,7 @@ export default {
     methods: {
         ...mapMutations(["UPDATE_PRODUTO", "PUSH_CARRINHO", "DECREMENTA_ESTOQUE"]),
         getURL(imageName){
-           // return require(`@/api/produtos/${imageName}/${imageName}-foto.jpg`)
+        //    return require(`@/api/produtos/${imageName}/${imageName}-foto.jpg`)
         },
         fetchProduto() {
 <span class="fstat-no" title="function not covered" >            api.get(`/produtos/${this.id}`)</span>
@@ -696,9 +698,9 @@ export default {
         },
         fecharModal({ target, currentTarget }) {
             if (target === currentTarget) {
+                document.title = "Techno"
                 this.UPDATE_PRODUTO(false)
-                this.$router.push({ name: "Home" });
-                
+                this.$router.push({ name: "Home" });                
             }
         },
         semProduto(){
@@ -711,7 +713,7 @@ export default {
                 return
 <span class="cstat-no" title="statement not covered" >            this.DECREMENTA_ESTOQUE();</span>
 <span class="cstat-no" title="statement not covered" >            const { id, nome, preco } = this.produto;</span>
-<span class="cstat-no" title="statement not covered" >            console.log('produto: ', this.produto)</span>
+            // console.log('produto: ', this.produto)
 <span class="cstat-no" title="statement not covered" >            this.PUSH_CARRINHO({ id, nome, preco });</span>
 <span class="cstat-no" title="statement not covered" >            this.alerta(`${nome} adicionado ao carrinho.`);</span>
 <span class="cstat-no" title="statement not covered" >            window.localStorage.carrinho = JSON.stringify(this.carrinho); </span>
@@ -732,6 +734,7 @@ export default {
 <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >            const items = this.carrinho.filter(({ id }) =&gt; id === this.produto.id);</span></span>
 <span class="cstat-no" title="statement not covered" >            this.$store.state.produto.estoque -= items.length;</span>
         },
+        
     },
     watch: {
         produto() {
@@ -909,7 +912,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Jan 07 2021 01:51:23 GMT-0300 (Brasilia Standard Time)
+                at Thu Jan 07 2021 15:58:00 GMT-0300 (Brasilia Standard Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

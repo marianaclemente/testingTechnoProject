@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">7.69% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/13</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">7.69% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/13</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -108,7 +108,10 @@
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
@@ -125,29 +128,30 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -162,6 +166,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Vue from 'vue';
 import Vuex from 'vuex';
+import Mutations from './mutations.js'
 &nbsp;
 Vue.use(Vuex);
 &nbsp;
@@ -175,42 +180,43 @@ export default new Vuex.Store({
     alertaAtivo: false,
     image: null
   },
-  mutations: {
-<span class="fstat-no" title="function not covered" >    CH</span>ANGE_CARRINHO_ATIVO(state, payload){
-<span class="cstat-no" title="statement not covered" >      state.carrinhoAtivo = payload</span>
-    },
-<span class="fstat-no" title="function not covered" >    UP</span>DATE_PRODUTO(state, payload){
-<span class="cstat-no" title="statement not covered" >      state.produto = payload</span>
-    },
-<span class="fstat-no" title="function not covered" >    RE</span>MOVE_CARRINHO(state, index){
-<span class="cstat-no" title="statement not covered" >      state.carrinho.splice(index, 1);</span>
-    },
-<span class="fstat-no" title="function not covered" >    PU</span>SH_CARRINHO(state, payload){
-<span class="cstat-no" title="statement not covered" >      state.carrinho.push(payload);</span>
-    },
-<span class="fstat-no" title="function not covered" >    DE</span>CREMENTA_ESTOQUE(state){
-<span class="cstat-no" title="statement not covered" >      state.produto.estoque--;</span>
-    },
-<span class="fstat-no" title="function not covered" >    up</span>dateProduto(state){
-<span class="cstat-no" title="statement not covered" >        console.log("item3")</span>
-<span class="cstat-no" title="statement not covered" >        document.title = state.produto.nome || "Techno";</span>
-        const hash = <span class="cstat-no" title="statement not covered" >state.produto.id || "";</span>
-<span class="cstat-no" title="statement not covered" >        history.pushState(null, null, `#${hash}`);</span>
+  Mutations
+  // mutations: {
+  //   CHANGE_CARRINHO_ATIVO(state, payload){
+  //     state.carrinhoAtivo = payload
+  //   },
+  //   UPDATE_PRODUTO(state, payload){
+  //     state.produto = payload
+  //   },
+  //   REMOVE_CARRINHO(state, index){
+  //     state.carrinho.splice(index, 1);
+  //   },
+  //   PUSH_CARRINHO(state, payload){
+  //     state.carrinho.push(payload);
+  //   },
+  //   DECREMENTA_ESTOQUE(state){
+  //     state.produto.estoque--;
+  //   },
+  //   updateProduto(state){
+  //       console.log("item3")
+  //       document.title = state.produto.nome || "Techno";
+  //       const hash = state.produto.id || "";
+  //       history.pushState(null, null, `#${hash}`);
         
-<span class="cstat-no" title="statement not covered" >        if (state.produto) {</span>
-<span class="cstat-no" title="statement not covered" >            console.log("item2")</span>
-<span class="cstat-no" title="statement not covered" >            this.compararEstoque();</span>
-        }
-    },
-  },
-  actions: {
+  //       if (state.produto) {
+  //           console.log("item2")
+  //           this.compararEstoque();
+  //       }
+  //   },
+  // },
+  // actions: {
     
-  },
-  getters: {
+  // },
+  // getters: {
     
-  },
-  modules: {
-  }
+  // },
+  // modules: {
+  // }
 })
 &nbsp;</pre></td></tr></table></pre>
 
@@ -219,7 +225,7 @@ export default new Vuex.Store({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Jan 07 2021 01:51:23 GMT-0300 (Brasilia Standard Time)
+                at Thu Jan 07 2021 15:58:00 GMT-0300 (Brasilia Standard Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

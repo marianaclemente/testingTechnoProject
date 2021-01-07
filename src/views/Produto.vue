@@ -58,7 +58,7 @@ export default {
     methods: {
         ...mapMutations(["UPDATE_PRODUTO", "PUSH_CARRINHO", "DECREMENTA_ESTOQUE"]),
         getURL(imageName){
-           // return require(`@/api/produtos/${imageName}/${imageName}-foto.jpg`)
+        //    return require(`@/api/produtos/${imageName}/${imageName}-foto.jpg`)
         },
         fetchProduto() {
             api.get(`/produtos/${this.id}`)
@@ -74,9 +74,9 @@ export default {
         },
         fecharModal({ target, currentTarget }) {
             if (target === currentTarget) {
+                document.title = "Techno"
                 this.UPDATE_PRODUTO(false)
-                this.$router.push({ name: "Home" });
-                
+                this.$router.push({ name: "Home" });                
             }
         },
         semProduto(){
@@ -89,7 +89,7 @@ export default {
                 return
             this.DECREMENTA_ESTOQUE();
             const { id, nome, preco } = this.produto;
-            console.log('produto: ', this.produto)
+            // console.log('produto: ', this.produto)
             this.PUSH_CARRINHO({ id, nome, preco });
             this.alerta(`${nome} adicionado ao carrinho.`);
             window.localStorage.carrinho = JSON.stringify(this.carrinho); 
@@ -110,6 +110,7 @@ export default {
             const items = this.carrinho.filter(({ id }) => id === this.produto.id);
             this.$store.state.produto.estoque -= items.length;
         },
+        
     },
     watch: {
         produto() {

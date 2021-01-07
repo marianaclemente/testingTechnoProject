@@ -21,7 +21,7 @@ import { mapMutations } from "vuex";
 
 // import image from "@/api/produtos/notebook/notebook.jpg"
 export default {
-    name: "ProdutosLista",
+    // name: "ProdutosLista",
     data() {
         return {
             produtos: [],
@@ -54,25 +54,23 @@ export default {
                 })
         },
         abrirModal(id) {
-            console.log('oii')
             this.fetchProduto(id);
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
         },
-        
-        // router() {
-        //     const hash = document.location.hash;
-        //     if (hash) {
-        //         this.fetchProduto(hash.replace("#", ""));
-        //     }
-        // }
+        router() {
+            const hash = document.location.hash;
+            if (hash) {
+                this.fetchProduto(hash.replace("#", ""));
+            }
+        }
     },
     watch: {
-        // url() {
-        //     this.fetchProdutos();
-        // }
+        url() {
+            this.fetchProdutos();
+        }
     },
     created() {
         this.fetchProdutos();

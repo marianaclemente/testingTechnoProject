@@ -14,15 +14,15 @@ export default {
     DECREMENTA_ESTOQUE(state){
     state.produto.estoque--;
     },
-    updateProduto(state){
-        console.log("item3")
-        document.title = state.produto.nome || "Techno";
-        const hash = state.produto.id || "";
-        history.pushState(null, null, `#${hash}`);
+    // updateProduto(state){
+    //     console.log("item3")
+    //     document.title = state.produto.nome || "Techno";
+    //     const hash = state.produto.id || "";
+    //     history.pushState(null, null, `#${hash}`);
         
-        if (state.produto) {
-            console.log("item2")
-            this.compararEstoque();
-        }
-    }
+    //     if (state.produto) {
+    //         console.log("item2")
+    //         this.compararEstoque();
+    //     }
+    // }
 }

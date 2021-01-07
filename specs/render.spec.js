@@ -78,7 +78,7 @@ describe('render TheHeader', () => {
   it('create a component to test', async () => {
         const state = { produto: produto, carrinho: [{ "id": "notebook", "nome": "Notebook", "preco": 2999 },
         { "id": "smartwatch", "nome": "Smartwatch", "preco": 5000 },
-        { "id": "tablet", "nome": "Tablet", "preco": 1500 }], totalCarrinho: 0}
+        { "id": "tablet", "nome": "Tablet", "preco": 1500 }], totalCarrinho: 9499}
         const store = new Vuex.Store({state, mutations})
         const wrapper = await render(TheHeader, {
             localVue: VueWithVuex,

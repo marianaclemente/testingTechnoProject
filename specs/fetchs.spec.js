@@ -1,7 +1,9 @@
 jest.mock("@/services.js");
 
 import Vuex from "vuex"
-// import VueRouter from "vue-router"
+// import Router from "vue-router"
+import router from '@/router'
+
 
 import { mount ,createLocalVue} from "@vue/test-utils"
 import mutations from '@/store/mutations'
@@ -13,7 +15,7 @@ import data from "@/api/produtos.json"
 
 const VueWithVuex = createLocalVue()
 VueWithVuex.use(Vuex)
-// VueWithVuex.use(VueRouter)
+VueWithVuex.use(router)
 // const router = new VueRouter()
 
 const produtos = data.produtos
@@ -59,7 +61,7 @@ describe('FetchProdutos', () => {
         const wrapper = mount(ProdutosLista, {
             localVue: VueWithVuex,
             store,
-            // router
+            router
         })
         wrapper.vm.fetchProdutos()
         expect(api.get).toHaveBeenCalledTimes(3);
