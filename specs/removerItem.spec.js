@@ -1,7 +1,7 @@
 import Vuex from "vuex"
 import Vue from "vue"
 import { mount, createLocalVue } from "@vue/test-utils"
-import mutations from '@/store/mutations'
+import { mutations } from '@/store/mutations'
 
 
 import Carrinho from '@/views/Carrinho'

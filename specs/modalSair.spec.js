@@ -1,6 +1,6 @@
 import Vuex from "vuex"
 import { mount, createLocalVue, shallowMount } from "@vue/test-utils"
-import mutations from '@/store/mutations'
+import { mutations } from '@/store/mutations'
 import Produto from '@/views/Produto'
 import ProdutosLista from '@/components/ProdutosLista'
 

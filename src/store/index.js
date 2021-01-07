@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import Mutations from './mutations.js'
+import { mutations } from './mutations.js'
 
 Vue.use(Vuex);
 
@@ -14,7 +14,7 @@ export default new Vuex.Store({
     alertaAtivo: false,
     image: null
   },
-  Mutations
+  mutations
   // mutations: {
   //   CHANGE_CARRINHO_ATIVO(state, payload){
   //     state.carrinhoAtivo = payload
@@ -22,6 +22,7 @@ export default new Vuex.Store({
   //   UPDATE_PRODUTO(state, payload){
   //     state.produto = payload
   //   },
+  // }
   //   REMOVE_CARRINHO(state, index){
   //     state.carrinho.splice(index, 1);
   //   },

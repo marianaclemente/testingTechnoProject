@@ -3,7 +3,7 @@ jest.mock("@/services.js");
 import Vuex from "vuex"
 // import VueRouter from "vue-router"
 import { mount ,createLocalVue, shallowMount} from "@vue/test-utils"
-import mutations from '@/store/mutations'
+import { mutations } from '@/store/mutations'
 import ProdutosLista from '@/components/ProdutosLista'
 import { api } from "@/services.js";
 import data from "@/api/produtos.json"

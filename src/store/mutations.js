@@ -1,4 +1,5 @@
-export default {
+// export default {
+export const mutations =  {
     CHANGE_CARRINHO_ATIVO(state, payload){
         state.carrinhoAtivo = payload
     },
