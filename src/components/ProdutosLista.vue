@@ -60,12 +60,12 @@ export default {
                 behavior: "smooth"
             });
         },
-        router() {
-            const hash = document.location.hash;
-            if (hash) {
-                this.fetchProduto(hash.replace("#", ""));
-            }
-        }
+        // router() {
+        //     const hash = document.location.hash;
+        //     if (hash) {
+        //         this.fetchProduto(hash.replace("#", ""));
+        //     }
+        // }
     },
     watch: {
         url() {

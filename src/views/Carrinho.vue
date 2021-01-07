@@ -1,21 +1,23 @@
 <template>
-     <section class="carrinho_modal" :class="{ativo: $store.state.carrinhoAtivo}" @click="clickForaCarrinho">
-        <div class="carrinho_container">
-            <button class="carrinho_fechar" @click="$store.state.carrinhoAtivo = false">X</button>
-            <h2 class="carrinho_titulo">Carrinho</h2>
-            <div>
-                <ul class="carrinho_lista">
-                    <li v-for="(item, index) in $store.state.carrinho" class="carrinho_item" :key="index">
-                        <p>{{item.nome}}</p>
-                        <p class="carrinho_preco">{{numeroPreco(item.preco)}}</p>
-                        <button class="carrinho_remover" @click="removerItem(index)">X</button>
-                    </li>
-                </ul>
-                <p class="carrinho_total">{{numeroPreco(carrinhoTotal)}}</p>
-                <button class="carrinho_finalizar">Finalizar Compra</button>
+    <div>
+        <section class="carrinho_modal" :class="{ativo: $store.state.carrinhoAtivo}" @click="clickForaCarrinho">
+            <div class="carrinho_container">
+                <button class="carrinho_fechar" @click="$store.state.carrinhoAtivo = false">X</button>
+                <h2 class="carrinho_titulo">Carrinho</h2>
+                <div>
+                    <ul class="carrinho_lista">
+                        <li v-for="(item, index) in $store.state.carrinho" class="carrinho_item" :key="index">
+                            <p>{{item.nome}}</p>
+                            <p class="carrinho_preco">{{numeroPreco(item.preco)}}</p>
+                            <button class="carrinho_remover" @click="removerItem(index)">X</button>
+                        </li>
+                    </ul>
+                    <p class="carrinho_total">{{numeroPreco(carrinhoTotal)}}</p>
+                    <button class="carrinho_finalizar">Finalizar Compra</button>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </template>
 
 <script>
@@ -59,10 +61,10 @@ export default {
             this.REMOVE_CARRINHO(index)
             window.localStorage.carrinho = JSON.stringify(this.carrinho); 
         },
-        compararEstoque() {
-            const items = this.carrinho.filter(({ id }) => id === this.produto.id);
-            this.$store.state.produto.estoque -= items.length;
-        },
+        // compararEstoque() {
+        //     const items = this.carrinho.filter(({ id }) => id === this.produto.id);
+        //     this.$store.state.produto.estoque -= items.length;
+        // },
     }
 }
 </script>

@@ -101,11 +101,11 @@ export default {
                 this.$store.state.alertaAtivo = false;
             }, 1500);
         },
-        checarLocalStorage() {
-            if (window.localStorage.carrinho){
-                this.$store.state.carrinho = JSON.parse(window.localStorage.carrinho);
-            }
-        },
+        // checarLocalStorage() {
+        //     if (window.localStorage.carrinho){
+        //         this.$store.state.carrinho = JSON.parse(window.localStorage.carrinho);
+        //     }
+        // },
         compararEstoque() {
             const items = this.carrinho.filter(({ id }) => id === this.produto.id);
             this.$store.state.produto.estoque -= items.length;

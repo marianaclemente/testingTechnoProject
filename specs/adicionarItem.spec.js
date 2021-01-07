@@ -115,4 +115,38 @@ describe('Adicionar Item', () => {
     const esperado = wrapper.vm.mensagemAlerta
     expect(`${nome} adicionado ao carrinho.`).toStrictEqual(esperado)
   })
+
+  it('Testando adicionarItem', async () => {
+    const state = { produto: {
+      "id": "notebook",
+      "nome": "Notebook",
+      "preco": 2999,
+      "img": "@/api/produtos/notebook/notebook.jpg",
+      "descricao": "Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a necessidade de renovação processual causa impacto indireto na reavaliação do orçamento setorial.",
+      "estoque": 12,
+      "reviews": [
+        {
+          "nome": "Fábio",
+          "estrelas": 5,
+          "descricao": "Gostei muito do produto, atendeu todas as minhas necessidades"
+        },
+        {
+          "nome": "Fábio",
+          "estrelas": 5,
+          "descricao": "Gostei muito do produto, atendeu todas as minhas necessidades"
+        }
+      ]
+    }, 
+    carrinho: [], carrinhoAtivo: true }
+    const store = new Vuex.Store({state, mutations})
+    const wrapper = mount(Produto, {
+        localVue: VueWithVuex,
+        store
+    })
+    const buttonArray = wrapper.findAll('button')
+    await buttonArray.at(1).trigger('click')
+    expect(buttonArray.at(1).text()).toBe('Adicionar Item')
+    expect(wrapper.vm.produto.estoque).toEqual(11)
+    expect(wrapper.vm.carrinho).toEqual([{"id": "notebook", "nome": "Notebook", "preco": 2999}])
+  })
 })

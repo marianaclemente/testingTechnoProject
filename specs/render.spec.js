@@ -6,9 +6,8 @@ import TheHeader from '@/components/TheHeader'
 import App from '@/App'
 
 import Vuex from "vuex"
-import { mount, createLocalVue, shallowMount } from "@vue/test-utils"
+import { createLocalVue } from "@vue/test-utils"
 import mutations from '@/store/mutations'
-
 
 const VueWithVuex = createLocalVue()
 VueWithVuex.use(Vuex)
@@ -115,17 +114,5 @@ describe('render App', () => {
   })
 })
 
-// describe('render Main', () => {
-//   it('create a component to test', async () => {
-//         const state = { alertaAtivo: true, mensagemAlerta: "Item adicionado"}
-//         const store = new Vuex.Store({state, mutations})
-//         const wrapper = await render(Main, {
-//             localVue: VueWithVuex,
-//             store
-//         })
-//         // const divId = wrapper.find('#app')
-//         // expect(divId.element.id).toBe('app')
-//         expect(wrapper.find('div').length).toEqual(1)
-//   })
-// })
+
 

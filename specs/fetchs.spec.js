@@ -104,7 +104,7 @@ describe('FetchProduto', () => {
         expect(api.get).toHaveBeenCalledTimes(3);
       })
 
-      it('Deve retornar 1 objeto com id = notebook', async () => {
+    it('Deve retornar 1 objeto com id = notebook', async () => {
         const {
             data: { results },
         } = await api.get();

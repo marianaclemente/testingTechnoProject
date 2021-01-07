@@ -24,10 +24,10 @@ export default {
   },
   methods: {
     checarLocalStorage() {
-            if (window.localStorage.carrinho){
-                this.$store.state.carrinho = JSON.parse(window.localStorage.carrinho);
-            }
-        }
+      if (window.localStorage.carrinho){
+          this.$store.state.carrinho = JSON.parse(window.localStorage.carrinho);
+      }
+    }
   },
   computed: {
     ...mapState(["produto", "carrinho", "totalCarrinho", "carrinhoAtivo"]),

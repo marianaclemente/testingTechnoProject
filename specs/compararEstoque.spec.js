@@ -5,6 +5,7 @@ import mutations from '@/store/mutations'
 
 
 import Carrinho from '@/views/Carrinho'
+import Produto from '@/views/Produto'
 import myStore from '@/store/index'
 
 const VueWithVuex = createLocalVue()
@@ -42,7 +43,7 @@ describe('Comparar Estoque', () => {
         { "id": "smartwatch", "nome": "Smartwatch", "preco": 1199 }]
     }
         const store = new Vuex.Store({state, mutations})
-        const wrapper = mount(Carrinho, {
+        const wrapper = mount(Produto, {
             localVue: VueWithVuex,
             store
     })
