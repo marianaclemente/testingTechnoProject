@@ -7,9 +7,12 @@ import { mutations } from '@/store/mutations'
 import ProdutosLista from '@/components/ProdutosLista'
 import { api } from "@/services.js";
 import data from "@/api/produtos.json"
+import Router from 'vue-router'
 
 const VueWithVuex = createLocalVue()
 VueWithVuex.use(Vuex)
+VueWithVuex.use (Router);
+
 // VueWithVuex.use(VueRouter)
 // const router = new VueRouter()
 
@@ -30,6 +33,7 @@ describe('Entrar modal', () => {
         const wrapper = shallowMount(ProdutosLista, {
             localVue: VueWithVuex,
             store,
+            // stubs : [ 'router-link' ,  'router-view' ] 
         })
         await wrapper.setData({ produtos: [{ "id": "notebook", "nome": "Notebook", "preco": 2999 },
         { "id": "smartwatch", "nome": "Smartwatch", "preco": 1199 },

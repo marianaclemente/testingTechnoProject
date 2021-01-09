@@ -7,10 +7,8 @@ npm test
 
 Tests with error
 
-modalEntrar Router-link, Error: Not implemented: window.scrollTo
+modalEntrar - Error: Not implemented: window.scrollTo
 
-main [Vue warn]: Cannot find element: #app
+main - [Vue warn]: Cannot find element: #app
 
-fetchs Router-link
-
-adicionarItem [Vue warn]: Error in callback for watcher "carrinho": "TypeError: Converting circular structure to JSON
+adicionarItem - [Vue warn]: Error in callback for watcher "carrinho": "TypeError: Converting circular structure to JSON

@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>5/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>5/6</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -160,20 +160,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -250,21 +250,21 @@
 &lt;/template&gt;
 &nbsp;
 &lt;script&gt;
-<span class="cstat-no" title="statement not covered" >import TheHeader from "@/components/TheHeader.vue"</span>
-<span class="cstat-no" title="statement not covered" >import ProdutosLista from "@/components/ProdutosLista.vue"</span>
-<span class="cstat-no" title="statement not covered" >import { mapState } from "vuex";</span>
+import TheHeader from "@/components/TheHeader.vue"
+import ProdutosLista from "@/components/ProdutosLista.vue"
+import { mapState } from "vuex";
 &nbsp;
 &nbsp;
 export default {
-<span class="fstat-no" title="function not covered" >  created(){</span>
-<span class="cstat-no" title="statement not covered" >    this.checarLocalStorage();</span>
+  created(){
+    this.checarLocalStorage();
     //window.localStorage.carrinho = JSON.stringify(this.$store.state.carrinho); 
   },
   methods: {
-<span class="fstat-no" title="function not covered" >    checarLocalStorage() {</span>
-<span class="cstat-no" title="statement not covered" >      if (window.localStorage.carrinho){</span>
-<span class="cstat-no" title="statement not covered" >        console.log('oi', window.localStorage.carrinho)</span>
-<span class="cstat-no" title="statement not covered" >          this.$store.state.carrinho = JSON.parse(window.localStorage.carrinho);</span>
+    checarLocalStorage() {
+<span class="missing-if-branch" title="if path not taken" >I</span>      if (window.localStorage.carrinho){
+        // console.log('oi', window.localStorage.carrinho)
+<span class="cstat-no" title="statement not covered" >         this.$store.state.carrinho = JSON.parse(window.localStorage.carrinho);</span>
       }
     }
   },
@@ -333,7 +333,7 @@ body {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Jan 09 2021 13:31:43 GMT-0300 (Brasilia Standard Time)
+                at Sat Jan 09 2021 14:21:30 GMT-0300 (Brasilia Standard Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
