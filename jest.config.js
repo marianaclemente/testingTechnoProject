@@ -3,7 +3,7 @@ module.exports = {
   automock: false,
 
   roots: ["<rootDir>/src/", "<rootDir>/specs/"],
-  moduleFileExtensions: ['js', 'vue', 'json'],
+  moduleFileExtensions: ['js', 'vue'],
   moduleNameMapper: {
     '\\.(jpg|jpeg|png)$': '<rootDir>/src/api/produtos.json',
     '^@/(.*)$': '<rootDir>/src/$1',
@@ -18,7 +18,7 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: ["**/*.{js,vue}", "!**/node_modules/**"],
   testPathIgnorePatterns: [
-    // "<rootDir>/node_modules/"
+    "<rootDir>/node_modules/"
   ]
   // transformIgnorePatterns: ['<rootDir>/node_modules/']
 }

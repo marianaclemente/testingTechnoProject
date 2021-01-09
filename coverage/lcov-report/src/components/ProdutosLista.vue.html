@@ -22,9 +22,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">78.57% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/14</span>
+                <span class='fraction'>0/14</span>
             </div>
         
             
@@ -36,16 +36,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">70% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>7/10</span>
+                <span class='fraction'>0/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">78.57% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/14</span>
+                <span class='fraction'>0/14</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -210,15 +210,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -233,9 +233,9 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -243,14 +243,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -268,7 +268,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -347,15 +347,15 @@
 &lt;/template&gt;
 &nbsp;
 &lt;script&gt;
-import { api } from "@/services.js";
-import numeroPreco from "@/api/mixins/numeroPreco.js";
-import { mapMutations } from "vuex";
+<span class="cstat-no" title="statement not covered" >import { api } from "@/services.js";</span>
+<span class="cstat-no" title="statement not covered" >import numeroPreco from "@/api/mixins/numeroPreco.js";</span>
+<span class="cstat-no" title="statement not covered" >import { mapMutations } from "vuex";</span>
 &nbsp;
 // import image from "@/api/produtos/notebook/notebook.jpg"
 export default {
     name: "ProdutosLista",
-    data() {
-        return {
+<span class="fstat-no" title="function not covered" >    data() {</span>
+<span class="cstat-no" title="statement not covered" >        return {</span>
             produtos: [],
             //baseURL: "http://localhost:3000/",   
         }
@@ -369,25 +369,25 @@ export default {
 <span class="fstat-no" title="function not covered" >        getURL(imageName){</span>
 <span class="cstat-no" title="statement not covered" >            return require(`@/api/produtos/${imageName}/${imageName}.jpg`)</span>
         },
-        async fetchProduto(id) {
-            await api.get(`/produtos/${id}`)
+<span class="fstat-no" title="function not covered" >        async fetchProduto(id) {</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >            await api.get(`/produtos/${id}`)</span></span>
                 .then(r =&gt; {
-                    this.UPDATE_PRODUTO(r.data);
+<span class="cstat-no" title="statement not covered" >                    this.UPDATE_PRODUTO(r.data);</span>
 <span class="fstat-no" title="function not covered" >                })</span>
                 .catch(function (error) {
 <span class="cstat-no" title="statement not covered" >                    console.log('request failed', error)</span>
                 })
         },
-        async fetchProdutos() {
+<span class="fstat-no" title="function not covered" >        async fetchProdutos() {</span>
             //this.produtos = dados
-            await api.get("/produtos")
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >            await api.get("/produtos")</span></span>
                 .then(r =&gt; {
-                    this.produtos = r.data;
+<span class="cstat-no" title="statement not covered" >                    this.produtos = r.data;</span>
                 })
         },
-        abrirModal(id) {
-            this.fetchProduto(id);
-            window.scrollTo({
+<span class="fstat-no" title="function not covered" >        abrirModal(id) {</span>
+<span class="cstat-no" title="statement not covered" >            this.fetchProduto(id);</span>
+<span class="cstat-no" title="statement not covered" >            window.scrollTo({</span>
                 top: 0,
                 behavior: "smooth"
             });
@@ -404,8 +404,8 @@ export default {
 <span class="cstat-no" title="statement not covered" >            this.fetchProdutos();</span>
         }
     },
-    created() {
-        this.fetchProdutos();
+<span class="fstat-no" title="function not covered" >    created() {</span>
+<span class="cstat-no" title="statement not covered" >        this.fetchProdutos();</span>
     // api.get(`/produtos/${this.image}`)
     //     .then(r =&gt; {
     //        this.image = r.data.img
@@ -474,7 +474,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Jan 09 2021 12:29:42 GMT-0300 (Brasilia Standard Time)
+                at Sat Jan 09 2021 13:31:43 GMT-0300 (Brasilia Standard Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

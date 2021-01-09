@@ -25,6 +25,7 @@ export default {
   methods: {
     checarLocalStorage() {
       if (window.localStorage.carrinho){
+        console.log('oi', window.localStorage.carrinho)
           this.$store.state.carrinho = JSON.parse(window.localStorage.carrinho);
       }
     }

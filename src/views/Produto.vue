@@ -123,8 +123,8 @@ export default {
             }
         },
         carrinho() {
-            // window.localStorage.carrinho = JSON.stringify(this.carrinho); 
-            window.localStorage.carrinho = this.carrinho.data; 
+            window.localStorage.carrinho = JSON.stringify(this.carrinho); 
+            // window.localStorage.carrinho = this.carrinho.data; 
         },
     },
     created() {
