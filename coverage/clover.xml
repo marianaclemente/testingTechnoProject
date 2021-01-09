@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1610215178234" clover="3.2.0">
-  <project timestamp="1610215178234" name="All files">
-    <metrics statements="99" coveredstatements="92" conditionals="18" coveredconditionals="16" methods="45" coveredmethods="40" elements="162" coveredelements="148" complexity="0" loc="99" ncloc="99" packages="7" files="14" classes="14"/>
+<coverage generated="1610222516753" clover="3.2.0">
+  <project timestamp="1610222516753" name="All files">
+    <metrics statements="98" coveredstatements="91" conditionals="18" coveredconditionals="16" methods="45" coveredmethods="40" elements="161" coveredelements="147" complexity="0" loc="98" ncloc="98" packages="7" files="14" classes="14"/>
     <package name="specs">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="fetch.js" path="/Users/marianaclemente/Repositórios/testingTechnoProject/specs/fetch.js">
@@ -13,26 +13,25 @@
       </file>
     </package>
     <package name="src">
-      <metrics statements="12" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+      <metrics statements="11" coveredstatements="10" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
       <file name="App.vue" path="/Users/marianaclemente/Repositórios/testingTechnoProject/src/App.vue">
         <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="22" count="2" type="stmt"/>
-        <line num="27" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="29" count="0" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="23" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="0" type="stmt"/>
       </file>
       <file name="main.js" path="/Users/marianaclemente/Repositórios/testingTechnoProject/src/main.js">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
       </file>
       <file name="services.js" path="/Users/marianaclemente/Repositórios/testingTechnoProject/src/services.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="8" type="stmt"/>
-        <line num="7" count="8" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
         <line num="9" count="13" type="stmt"/>
       </file>
     </package>
@@ -47,9 +46,9 @@
       <metrics statements="23" coveredstatements="20" conditionals="2" coveredconditionals="2" methods="13" coveredmethods="10"/>
       <file name="ProdutosLista.vue" path="/Users/marianaclemente/Repositórios/testingTechnoProject/src/components/ProdutosLista.vue">
         <metrics statements="14" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="7"/>
-        <line num="18" count="6" type="stmt"/>
-        <line num="19" count="6" type="stmt"/>
-        <line num="20" count="6" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
         <line num="26" count="6" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
         <line num="41" count="3" type="stmt"/>

@@ -5,7 +5,10 @@ describe('render Main', () => {
       it('create a component to test', async () => {
             const wrapper = await mount(Main, {
                   render:jest.fn(),
-                  $mount:jest.fn(),
+                  propsData: {
+                        id: '#app'
+                  }
+                  // $mount:jest.fn(),
             })
             expect(wrapper.is(Main)).toBe(true)
     })
