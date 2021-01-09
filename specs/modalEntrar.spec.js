@@ -26,14 +26,17 @@ describe('Entrar modal', () => {
         api.get.mockImplementation( () => {
             return Promise.resolve({ data: produtos});
         });
+        window.scrollTo = jest.fn()
     })
     it('Abrir modal, produto não null', async () => {
+        
         const state = { produto: null}
         const store = new Vuex.Store({state, mutations})
         const wrapper = shallowMount(ProdutosLista, {
             localVue: VueWithVuex,
             store,
-            // stubs : [ 'router-link' ,  'router-view' ] 
+            // window: JSON.stringify
+
         })
         await wrapper.setData({ produtos: [{ "id": "notebook", "nome": "Notebook", "preco": 2999 },
         { "id": "smartwatch", "nome": "Smartwatch", "preco": 1199 },

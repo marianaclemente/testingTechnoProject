@@ -56,6 +56,10 @@ describe('Adicionar Item', () => {
   })
 
   it('PUSH_CARRINHO', () => {
+  //   api.get.mockImplementation( () => {
+  //     return Promise.resolve({ data: { results: produtos} });
+  // });
+    JSON.stringify = jest.fn()
     const state = { carrinho: []}
     const produto = {
       "id": "notebook",
@@ -65,7 +69,8 @@ describe('Adicionar Item', () => {
     const store = new Vuex.Store({state, mutations})
     const wrapper = mount(Produto, {
         localVue: VueWithVuex,
-        store
+        store,
+        JSON: JSON.stringify
     })
     store.commit('PUSH_CARRINHO', state, produto);
     //mutations.DECREMENTA_ESTOQUE(state)
