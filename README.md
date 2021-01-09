@@ -1,12 +1,11 @@
-funcionando
-router
-render
-removerItem
-compararEstoque
-modalSair
-adicionarItem
+cd src/api/
+json-server --watch produtos.json
 
-Failed
-modalEntrar Router-link
-main [Vue warn]: Failed to mount component: template or render function not defined.
+npm run serve
+
+npm test
+
+Tests with error
+modalEntrar Router-link, Error: Not implemented: window.scrollTo
+main [Vue warn]: Cannot find element: #app
 fetchs Router-link
