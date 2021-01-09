@@ -46,7 +46,8 @@ describe('Adicionar Item', () => {
       const store = new Vuex.Store({state, mutations})
       const wrapper = mount(Produto, {
           localVue: VueWithVuex,
-          store
+          store,
+          // require:jest.fn(),
       })
       store.commit('DECREMENTA_ESTOQUE', state);
       //mutations.DECREMENTA_ESTOQUE(state)

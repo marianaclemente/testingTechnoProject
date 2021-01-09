@@ -102,7 +102,10 @@ describe('render Alerta', () => {
 
 describe('render App', () => {
   it('create a component to test', async () => {
-        const state = { alertaAtivo: true, mensagemAlerta: "Item adicionado"}
+        const state = { alertaAtivo: true, mensagemAlerta: "Item adicionado", 
+          carrinho: [{ "id": "notebook", "nome": "Notebook", "preco": 2999 },
+            { "id": "smartwatch", "nome": "Smartwatch", "preco": 5000 },
+            { "id": "tablet", "nome": "Tablet", "preco": 1500 }]}
         const store = new Vuex.Store({state, mutations})
         const wrapper = await render(App, {
             localVue: VueWithVuex,
@@ -110,7 +113,7 @@ describe('render App', () => {
         })
         // const divId = wrapper.find('#app')
         // expect(divId.element.id).toBe('app')
-        expect(wrapper.find('div').length).toEqual(1)
+        expect(wrapper.find('div').length).toEqual(3)
   })
 })
 

@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test": "jest --no-cache"
+    "test": "jest"
   },
   "repository": "https://github.com/codebryo/vue-school-test-utils-base.git",
   "author": "Roman Kuba <roman.kuba@gmail.com>",

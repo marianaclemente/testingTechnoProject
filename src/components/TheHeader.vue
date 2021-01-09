@@ -23,8 +23,8 @@ export default {
         ...mapState(["carrinho", "totalCarrinho"]),
         carrinhoTotal() {
             let total = 0;
-            // if (this.carrinho.length) {
-            if (this.carrinho) {
+            if (this.carrinho.length) {
+            // if (this.carrinho) {
                 this.carrinho.forEach(item => {
                     total += item.preco; 
                     this.$store.state.totalCarrinho = total;

@@ -24,11 +24,19 @@ describe('Sair modal Produto', () => {
     })
 
     it('Clicar fora modal, produto = false', async () => {
+        const push = jest.fn();
+        const $router = {
+            push: jest.fn(),
+        }
         const state = { produto: { "id": "notebook", "nome": "Notebook", "preco": 2999 } }
         const store = new Vuex.Store({state, mutations})
         const wrapper = mount(Produto, {
             localVue: VueWithVuex,
-            store
+            store,
+            mocks: {
+                // $route,
+                $router,
+            }
         })
         const sectionArray = wrapper.findAll('section')
         await sectionArray.trigger('click')
@@ -36,11 +44,19 @@ describe('Sair modal Produto', () => {
     })
 
     it('Clicar button X, produto = false', async () => {
+        const push = jest.fn();
+        const $router = {
+            push: jest.fn(),
+        }
         const state = { produto: { "id": "notebook", "nome": "Notebook", "preco": 2999 } }
         const store = new Vuex.Store({state, mutations})
         const wrapper = mount(Produto, {
             localVue: VueWithVuex,
-            store
+            store,
+            mocks: {
+                // $route,
+                $router,
+            }
         })
         const buttonArray = wrapper.findAll('button')
         await buttonArray.at(0).trigger('click')

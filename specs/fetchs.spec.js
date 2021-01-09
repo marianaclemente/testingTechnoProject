@@ -1,12 +1,16 @@
 jest.mock("@/services.js");
+// jest.mock("@/router/index.js");
 
 import Vuex from "vuex"
 // import Router from "vue-router"
-import router from '@/router'
+// import router from '@/router/index.js'
+import VueRouter from 'vue-router'
+import Home from '@/views/Home.vue'
+import Produto from '@/views/Produto.vue'
 
 
 import { mount ,createLocalVue} from "@vue/test-utils"
-import mutations from '@/store/mutations'
+import { mutations } from '@/store/mutations'
 import ProdutosLista from '@/components/ProdutosLista'
 import { fetchProdutos ,fetchProduto } from './fetch'
 // import axios from "axios"
@@ -15,8 +19,22 @@ import data from "@/api/produtos.json"
 
 const VueWithVuex = createLocalVue()
 VueWithVuex.use(Vuex)
-VueWithVuex.use(router)
+// VueWithVuex.use(VueRouter)
 // const router = new VueRouter()
+
+const routes = [
+    {
+      path: '/',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/notebook',
+      name: 'Produto',
+      component: Produto,
+      props: true
+    }
+]
 
 const produtos = data.produtos
 const produto = {
@@ -58,14 +76,19 @@ describe('FetchProdutos', () => {
     it('FetchProdutos in ProdutosLista', async () => {
         const state = { carrinho: []}
         const store = new Vuex.Store({state, mutations})
+        // const router = new VueRouter({mode: 'history', routes: routes})
         const wrapper = mount(ProdutosLista, {
             localVue: VueWithVuex,
             store,
-            router
+            // router,
         })
+        await wrapper.setData({ produtos: produtos })
+        // router.push('/notebook')
+        // await wrapper.vm.$nextTick()
+        
         wrapper.vm.fetchProdutos()
         expect(api.get).toHaveBeenCalledTimes(3);
-      })
+    })
     it('Deve retornar 5 objetos', async () => {
         const {
             data: { results },

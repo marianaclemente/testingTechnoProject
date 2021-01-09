@@ -5,6 +5,7 @@
             <div class="modal_container">
                 <div class="modal_img">
                     <img :src="getURL(produto.id)" :alt="produto.nome">
+                    <!-- <img :src="produto.imgProduto" :alt="produto.nome"> -->
                 </div>
                 <div class="modal_dados">
                     <button v-if="produto" @click="semProduto" class="modal_fechar">X</button>
@@ -36,6 +37,7 @@
 import { api } from "@/services.js";
 import Alerta from "@/views/Alerta.vue";
 import numeroPreco from "@/api/mixins/numeroPreco.js";
+import axios from 'axios'
 
 // import * as path from 'path'
 //import axios from "axios"
@@ -48,7 +50,6 @@ export default {
     props: ["id"],
     data() {
         return {
-            //produto: [],
         }
     },
     mixins: [numeroPreco],
@@ -58,7 +59,7 @@ export default {
     methods: {
         ...mapMutations(["UPDATE_PRODUTO", "PUSH_CARRINHO", "DECREMENTA_ESTOQUE"]),
         getURL(imageName){
-        //    return require(`@/api/produtos/${imageName}/${imageName}-foto.jpg`)
+            return require(`@/api/produtos/${imageName}/${imageName}-foto.jpg`)
         },
         fetchProduto() {
             api.get(`/produtos/${this.id}`)
@@ -122,7 +123,8 @@ export default {
             }
         },
         carrinho() {
-            window.localStorage.carrinho = JSON.stringify(this.carrinho); 
+            // window.localStorage.carrinho = JSON.stringify(this.carrinho); 
+            window.localStorage.carrinho = this.carrinho.data; 
         },
     },
     created() {

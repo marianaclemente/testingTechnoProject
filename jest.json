@@ -1,0 +1,20 @@
+{
+    "verbose": true,
+    "automock": false,
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest",
+      ".*\\.(js)$": "babel-jest"
+    },
+    "moduleNameMapper": {
+        "\\.(jpg|jpeg|png)$": "<rootDir>/src/api/produtos.json",
+        "^@/(.*)$": "<rootDir>/src/$1"
+    },
+     "testPathIgnorePatterns": [
+      "<rootDir>/(build|docs|node_modules)/"
+    ]
+}

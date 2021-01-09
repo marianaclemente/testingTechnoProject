@@ -21,7 +21,7 @@ import { mapMutations } from "vuex";
 
 // import image from "@/api/produtos/notebook/notebook.jpg"
 export default {
-    // name: "ProdutosLista",
+    name: "ProdutosLista",
     data() {
         return {
             produtos: [],
