@@ -1,10 +1,5 @@
-cd src/api/
-json-server --watch produtos.json
+Para rodar: npm run serve
 
-npm run serve
+Para testar: npm test
 
-npm test
-
-Tests with error
-
-main - [Vue warn]: Cannot find element: #app
+Na pasta: cd src/api/, json-server --watch produtos.json
