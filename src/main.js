@@ -16,19 +16,17 @@
 
 
 // // Vue.use(store).use(router).mount('#app')
-
 import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
 
 Vue.config.productionTip = false
-
 export default new Vue({
   el: '#app',
   router,
   store,
-  components: { App },
-  template: '<App/>',
+  // components: { App },
+  // template: '<App/>',
   render: h => h(App)
 })

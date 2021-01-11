@@ -1,10 +1,12 @@
 
 <template>
-  <div id="app">
-    <TheHeader/>
-    <router-view/>
-    <ProdutosLista/>
-  </div>
+  <body>
+    <div id="app">
+      <TheHeader/>
+      <router-view/>
+      <ProdutosLista/>
+    </div>
+  </body>
 </template>
 
 <script>
